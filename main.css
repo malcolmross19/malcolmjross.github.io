@@ -100,7 +100,7 @@ p {
 
 #flaticonLink {
     display: flex;
-    float: right;
+    text-align: center;
 }
 
 #flaticon {
