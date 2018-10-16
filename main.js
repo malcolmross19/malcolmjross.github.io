@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
           
           for (var i = 0; i < response.length; i++) {
             var badge = response[i];
-            var badgeDiv = document.createElement('a');
+            var badgeDiv = document.createElement('article');
             pluralSightDiv.appendChild(badgeDiv);
             
             badgeDiv.style.flex = '1 1 auto';
@@ -22,7 +22,6 @@ window.addEventListener('load', function () {
             badgeDiv.style.display = 'flex';
             badgeDiv.style.flexDirection = 'column';
             badgeDiv.style.padding = '10px';
-            badgeDiv.href = 'https://pluralsight.com' + badge['url'];
             badgeDiv.style.fontSize = '13px';
             
             var img = document.createElement('img');
@@ -58,9 +57,9 @@ window.addEventListener('load', function () {
             
             var verified = document.createElement('label');
             badgeDiv.appendChild(verified);
-            var vDate = new Date(badge['dateCompleted']);
+            var vDate = new Date(badge['dateCompleted'].substr(0,4), badge['dateCompleted'].substr(5,2), badge['dateCompleted'].substr(8,2));
             verified.innerText = 'VERIFIED ' + vDate.getMonth() + '.' +
-            vDate.getDate() + '.' + vDate.getYear();
+            vDate.getDate() + '.' + vDate.getFullYear();
           }
       } 
     }
