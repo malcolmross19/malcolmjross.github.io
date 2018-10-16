@@ -126,10 +126,6 @@ ul {
     line-height: 30px;
 }
 
-.landingL {
-    margin-top: 4em;
-}
-
 .scroll {
     position: absolute;
     bottom: 180px;
@@ -139,7 +135,7 @@ ul {
 }
 
 /*************** Skills ******************/
-.skills {
+.skills, .projects {
     text-align: center;
     margin-bottom: 20em;
 }
@@ -153,8 +149,38 @@ ul {
     margin: 0 15px;
 }
 
-.skills > .programs {
+.skills > .programs, .skills > .languages {
     margin-bottom: 5em;
+}
+
+#plural-sight-div {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.badgeDiv {
+    flex: 1 1 auto;
+    background-color: #262626;
+    color: white;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.badgeDiv img {
+    width: 100px;
+    margin: auto;
+}
+
+.badgeDiv label {
+    color: lightgray;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 /*************** Project 01 ******************/
